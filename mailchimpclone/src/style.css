@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+
+:root{
+	--dark-green:#004225;
+	--primary-yellow:#FFB000;
+	--bg-light:#F5F5DC;
+	--bg-pint:#FFCF9D;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montagu Slab Variable', sans-serif;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: 600;
+}
+.stats-number {
+	font-size: 36px;	
+}
+.home-section-left{
+	background-image: url(./assets/liquid-cheese.svg);
+	background-size: cover;
+
+}
+.common-pink-button{
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	padding: 8px 24px;
+	background-color: var(--bg-pint);
+}
+.common-subtle-button{
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	padding: 8px 24px;
+	background-color: rgba(0,0,0,0.03);
+}
+.sidemenu-item {
+	padding: 10px 45px;
+}
+.sidemenu-item:hover {
+	background-color: rgba(0,0,0,0.03);
+}
+.common-button{
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	border:1px solid var(--dark-green);
+	padding: 8px 24px;
+}
+.common-button::before{
+	content:"";
+	z-index: -1;
+	inset: 0;
+	position: absolute;
+	scale: 0 1;
+	transition: scale 500ms;
+	transform-origin: right;
+}
+.common-button-green::before {
+	background-color: var(--dark-green);
+}
+.common-button-yellow::before {
+	background-color: var(--primary-yellow);
+}
+.common-button-pink::before {
+	background-color: var(--bg-pint);
+}
+.common-button-green:hover{
+	color: var(--primary-yellow);
+}
+.common-button-yellow:hover{
+	color: var(--dark-green);
+}
+.common-button:hover:before{
+	scale: 1 1;
+	transform-origin: left;
+}
